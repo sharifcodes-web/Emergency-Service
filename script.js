@@ -1,5 +1,4 @@
-// // script.js — Vanilla JS for: hearts counter, call button (coins deduction), call history, copy button (clipboard) & exact timestamps
-// // Include this file just before </body>: <script src="./script.js"></script>
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('header');
@@ -155,59 +154,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// ----------------
-// Helper
-// const num = t => parseInt(t) || 0;
-// const set = (el, txt) => el.innerHTML = txt;
-// const time = () => {
-//     let d = new Date();
-//     return d.toISOString().replace("T", " ").split(".")[0];
-// };
 
-// // Elements
-// const heartCounter = document.getElementById("heartCounter"),
-//     coinCounter = document.getElementById("coinCounter"),
-//     copyCounter = document.getElementById("copyCounter"),
-//     callHistory = document.getElementById("callHistory"),
-//     clearHistoryBtn = document.getElementById("clearHistory"),
-//     cards = document.querySelectorAll(".card");
 
-// // Copy
-// cards.forEach(c => {
-//     c.querySelector(".copyBtn").onclick = async () => {
-//         let numText = c.querySelector(".service-number").textContent;
-//         try {
-//             await navigator.clipboard.writeText(numText);
-//             alert("Hotline copied: " + numText);
-//             set(copyCounter, `${num(copyCounter.textContent) + 1} Copy`);
-//         } catch { alert("Failed to copy!"); }
-//     };
-// });
 
-// // Call
-// cards.forEach(c => {
-//     c.querySelector(".callBtn").onclick = () => {
-//         let name = c.querySelector(".service-name").textContent,
-//             number = c.querySelector(".service-number").textContent,
-//             coins = num(coinCounter.textContent);
 
-//         if (coins < 20) return alert("Not enough coins!");
-//         set(coinCounter, `<img src="./assets/coin.png" width="20"> ${coins - 20}`);
-//         alert(`Calling ${name} (${number})`);
 
-//         let li = document.createElement("li");
-//         li.textContent = `${name} - ${number} • ${time()}`;
-//         callHistory.prepend(li);
-//     };
-// });
 
-// // Heart
-// cards.forEach(c => {
-//     c.querySelector(".heartBtn").onclick = () => {
-//         set(heartCounter, `❤️ ${num(heartCounter.textContent) + 1}`);
-//     };
-// });
-
-// // Clear History
-// clearHistoryBtn.onclick = () => callHistory.innerHTML = "";
 
